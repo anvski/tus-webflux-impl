@@ -36,7 +36,7 @@ The project uses PostgreSQL and provides an init migration using `Flyway` to set
 
 ## Security
 The project uses JWT as an authorization mechanism and provides a spring security configuration along with a JWT provider.
-The configuration provides a simple secret for the JWT encoding, in reality a high entropy secret would be used.
+**The configuration provides a simple secret for the JWT encoding, in reality a high entropy secret would be used.**
 
 ## Storage
 The project uses the local storage for saving the content transferred under the resumable upload protocol. The incoming file chunk is saved under the following base directory: `${user.dir}/upload_directory/staging_upload` and additionally mapped depending on the mime type from the request.
