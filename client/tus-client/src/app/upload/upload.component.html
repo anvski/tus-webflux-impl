@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="uploadForm" class="upload-form flex-contain-column" (ngSubmit)="onSubmit()">
+      <div class="uppy-container" [ngClass]="{'custom-form-error': isUploadFormInvalid}">
+        <uppy-dashboard [uppy]="uppy" [props]="dashboardOptions" #dashboardRef>
+        </uppy-dashboard>
+      </div>
+      <div class="upload-form-field flex-contain-column">
+        <mat-form-field>
+          <mat-label>Title</mat-label>
+          <input matInput formControlName="title" placeholder="Write something captivating!">
+        </mat-form-field>
+
+        <mat-form-field id="description">
+          <mat-label>Description</mat-label>
+          <input matInput formControlName="description" placeholder="Describe your video!">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" id="submitButton" [disabled]="uploadForm.invalid">Upload</button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

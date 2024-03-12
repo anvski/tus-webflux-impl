@@ -1,0 +1,61 @@
+.flex-container {
+  width: 100%;
+  display: flex;
+  height: 92%;
+}
+
+:host {
+  height: 100%;
+  display: block;
+}
+
+.flex-contain-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload-form {
+  padding: 10px;
+}
+.uppy-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: inherit;
+  border: 1px transparent;
+}
+
+.upload-form-field {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+#description {
+  height: 10em;
+}
+
+#submitButton {
+  width: 30%;
+  margin: 2em auto 0 auto;
+}
+
+.custom-form-error {
+  border: 1px solid #ff7f7f; /* Soft red color */
+  border-radius: 5px; /* Rounded corners */
+  transition: border-color 0.15s ease;
+}
+
+.custom-form-error:focus {
+  border-color: #ff4040; /* Darker red when focused */
+}
+
+.custom-form-error:hover {
+  border-color: #ff4040; /* Darker red on hover */
+}
+
+mat-card-content {
+  margin: auto;
+  width: 50%;
+}

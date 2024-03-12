@@ -1,0 +1,35 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/tus_db?currentSchema=main
+    username: postgres
+    password: postgres
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgresSQLDialect
+  flyway:
+    url:
+      jdbc:postgresql://localhost:5432/tus_db?currentSchema=main
+    locations:
+      - classpath:migrations
+    user: postgres
+    password: postgres
+    schemas: main
+  codec:
+    max-in-memory-size: 1MB
+#logging:
+#  level:
+#    io.r2dbc.postgresql.QUERY: DEBUG # for queries
+#    io.r2dbc.postgresql.PARAM: DEBUG # for parameters
+upload:
+  base: ${user.dir}
+  directory: ${upload.base}/upload_directory
+  staging-directory: ${upload.directory}/staging_upload
+  file-types-to-directory:
+    '[video/mp4]': ${upload.staging-directory}/video
+    '[image/png]': ${upload.staging-directory}/images
+    '[image/jpeg]': ${upload.staging-directory}/images
+    '[image/jpg]': ${upload.staging-directory}/images
+  mime-types-to-extensions:
+    '[video/mp4]': ".mp4"
+    '[image/png]': ".png"
+    '[image/jpeg]': ".jpeg"
+    '[image/jpg]': ".jpg"

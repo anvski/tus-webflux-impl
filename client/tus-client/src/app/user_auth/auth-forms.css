@@ -1,0 +1,28 @@
+.flex-sbs {
+  width: 100vw;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+mat-form-field {
+  width: 30%;
+  min-width: 300px;
+}
+
+a {
+  margin-top: 1em;
+}
+
+.centered-div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
